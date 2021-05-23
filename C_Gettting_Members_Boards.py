@@ -3,7 +3,9 @@
 
 import requests
 
-url = "https://api.trello.com/1/boards/60a3ab9b055f513351d5dfdb/cards"
+#url = "https://api.trello.com/1/members/me/boards"
+#url = "https://api.trello.com/1/members/me/boards?fields=name"
+url = "https://api.trello.com/1/members/me/boards?fields=name,url"
 
 query = {
    'key': '07d1ead8f2f1211b027cf6bb676a9e28',
