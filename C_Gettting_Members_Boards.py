@@ -3,8 +3,6 @@
 
 import requests
 
-#url = "https://api.trello.com/1/members/me/boards"
-#url = "https://api.trello.com/1/members/me/boards?fields=name"
 url = "https://api.trello.com/1/members/me/boards?fields=name,url"
 
 query = {
