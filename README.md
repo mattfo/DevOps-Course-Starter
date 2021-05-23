@@ -57,9 +57,22 @@ Matt extra notes:
 
 I've done everything above - I Got poetry run flask run - working
 
-needed to run this for the exercise: e(.venv) matthewfoster@iMac DevOps-Course-Starter-Module-2 % poetry add requests
+Need to run:
+
+% poetry add requests
 
 
 this added the line
 requests = "^2.25.1"
 to pyproject.toml
+
+Need to set up a Trello Account and update your credentials for KEY and TOKEN in config.py
+
+Refer to useful documents:
+
+https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/
+https://developer.atlassian.com/cloud/trello/rest/api-group-boards/#api-boards-id-get
+https://docs.python-requests.org/en/master/user/quickstart/#make-a-request
+
+
+

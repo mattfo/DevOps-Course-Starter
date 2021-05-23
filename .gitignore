@@ -118,3 +118,6 @@ env/
 
 ### Configuration files ###
 .env
+
+### New one's from Matt
+config.py

@@ -4,17 +4,19 @@
 from config import KEY, TOKEN
 import requests
 
-url = "https://api.trello.com/1/members/me/boards?fields=name,url"
+url = "https://api.trello.com/1/boards/60a4c4940294522119175ebc"
 
 query = {
    'key': KEY,
-   'token': TOKEN
+   'token': TOKEN,
+   'name': 'Matt ToDo Board'
 }
 
 response = requests.request(
-   "GET",
+   "PUT",
    url,
    params=query
 )
+
 
 print(response.text)
