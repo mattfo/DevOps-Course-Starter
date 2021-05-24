@@ -1,11 +1,12 @@
 # This code sample uses the 'requests' library:
 # http://docs.python-requests.org
 
-from config import KEY, TOKEN
+from config import DOING, DONE, KEY, PYTHONWORK, TODO, TOKEN
 import requests
 import json
 
-url = "https://api.trello.com/1/cards/07d1ead8f2f1211b027cf6bb676a9e28"
+#url = "https://api.trello.com/1/cards/07d1ead8f2f1211b027cf6bb676a9e28"
+url = "https://api.trello.com/1/cards/" + PYTHONWORK 
 
 headers = {
    "Accept": "application/json"
@@ -14,7 +15,7 @@ headers = {
 query = {
    'key': KEY,
    'token': TOKEN,
-   'idList': '60a4c4a7405fc93aa8f1a999'
+   'idList': DONE
 }
 
 response = requests.request(
