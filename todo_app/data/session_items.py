@@ -8,12 +8,28 @@ _DEFAULT_ITEMS = [
 
 def get_items():
     """
-    Fetches all saved items from the session.
+    Fetches all cards from the to do board.
 
     Returns:
         list: The list of saved items.
     """
-    return session.get('items', _DEFAULT_ITEMS)
+    #return session.get('items', _DEFAULT_ITEMS)
+
+    url = "https://api.trello.com/1/boards/" + BOARD + "/cards"
+
+    query = {
+    'key': KEY,
+    'token': TOKEN
+    }
+
+    response = requests.request(
+    "GET",
+    url,
+    params=query
+    )
+
+    print(response.text)
+    
 
 
 def get_item(id):

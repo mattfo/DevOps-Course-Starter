@@ -18,3 +18,13 @@ response = requests.request(
 )
 
 print(response.text)
+
+
+
+
+
+# New
+
+items = response.json()['result'][0]['result']['id']
+
+#print(response.text)
