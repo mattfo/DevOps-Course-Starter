@@ -68,11 +68,28 @@ to pyproject.toml
 
 Need to set up a Trello Account and update your credentials for KEY and TOKEN in config.py
 
+There are other uppercarse variables set up in there, you can add those as you become aware of what they are, for instance you will need to create a board before using BOARD
+
+BOARD = '60aae4dd3a59791541c8dc93'
+BOARDTEXT = "Matts ToDo Board"
+
+List: TODO = "60aae5fbefcb672f2976a218"
+Task: PYTHONWORK = "60aae7d9d819b725a1df6c91"
+
+List: DOING = "60aae600b685fb7eeda92576"
+Task: JSONWORK	= "60aae7e68ae1e01db6226b86"
+
+List: DONE = "60aae6034a30146398a55e17"
+Task: POSTMANWORK = "60aae7eeb7863687b3ca0d2c"
+
 Refer to useful documents:
 
 https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/
 https://developer.atlassian.com/cloud/trello/rest/api-group-boards/#api-boards-id-get
 https://docs.python-requests.org/en/master/user/quickstart/#make-a-request
 
+The exercise involves:
 
-
+F • Fetch all to-do items (cards) for the specified board
+I • Create a new card on the board's 'To Do' list
+H • Move a card from 'To Do' to 'Done' (or 'Doing' if you want to allow in-progress to-do items)
