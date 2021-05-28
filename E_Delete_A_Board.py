@@ -4,7 +4,7 @@
 from config import BOARD, KEY, TOKEN
 import requests
 
-url = "https://api.trello.com/1/boards/60aae0b71446fd45ec2a19b2"
+url = "https://api.trello.com/1/boards/" + BOARD
 
 query = {
    'key': KEY,
