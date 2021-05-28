@@ -4,7 +4,11 @@
 import requests
 
 response = requests.post('https://api.postcodes.io/postcodes', json={'postcodes' : ["NW5 1TL"]})
+
 lat = response.json()['result'][0]['result']['latitude']
 lon = response.json()['result'][0]['result']['longitude']
+
+print(" ")
 print(f"Got {lon} {lat}")
+print(" ")
 print(response.text)
