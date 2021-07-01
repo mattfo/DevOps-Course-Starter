@@ -3,23 +3,16 @@
 # 
 # 
 # from flask import session
-from config import KEY, TOKEN, TODO, DOING, DONE
+from config import BOARDTEXT, DONE, KEY, TOKEN, TODO
 import requests
 
-class ViewModel:
-    def __init__(self, items):
-        self._items = items
-    
-    @property
-    def items(self):
-        return self._items
 
-def get_items(idList):
+def get_items():
     """
-    Fetches all cards for the particular list id argument.
+    Fetches all cards from the to do board.
     """
 
-    url = "https://api.trello.com/1/lists/" + idList + "/cards"
+    url = "https://api.trello.com/1/lists/" + TODO + "/cards"
 
     query = {
     'key': KEY,
@@ -37,18 +30,17 @@ def get_items(idList):
 
     x=response.json()
 
-    #empty list:
+    #items = {}
     items = []
-    array_count = 0
 
     for i in x:
         #print(i['id'])
         #print(i['name'])
 
-        array_count + 1
         items.append({'id': i['id'], 'status': 'Not Started', 'title': i['name'] })
 
     return items
+
 
 def get_item(id):
     """

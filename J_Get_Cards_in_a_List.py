@@ -1,10 +1,10 @@
 # This code sample uses the 'requests' library:
 # http://docs.python-requests.org
 
-from config import BOARDTEXT, KEY, TOKEN, TODO
+from config import BOARDTEXT, TODO, DOING, KEY, TOKEN
 import requests
 
-url = "https://api.trello.com/1/lists/" + TODO + "/cards"
+url = "https://api.trello.com/1/lists/" + DOING + "/cards"
 
 query = {
    'key': KEY,
