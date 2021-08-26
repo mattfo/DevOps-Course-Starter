@@ -1,0 +1,28 @@
+
+# This is copied from workshop 5
+
+version: "3"
+
+services:
+  cliapp:
+    #docker build -f Dockerfile.cliapp --tag cliapp-matt .
+    #docker run --mount type=bind,src=$(pwd)/shared_space,dst=/opt/chimera/data cliapp-matt
+    image: cliapp-matt
+
+    volumes:
+        - type: bind
+          source: ./shared_space
+          target: /opt/chimera/data
+
+  webapp:
+    #docker build -f Dockerfile.webapp --tag webapp-matt .
+    #docker run -p 8080:80 --mount type=bind,src=$(pwd)/shared_space,dst=/opt/chimera/data webapp-matt
+    image: webapp-matt
+
+    ports:
+        - "8080:80"
+    volumes:
+        - type: bind
+          source: ./shared_space
+          target: /opt/chimera/data
+    

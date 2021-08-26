@@ -19,9 +19,11 @@ Vagrant.configure("2") do |config|
     sudo apt-get update
     sudo apt-get install libssl1.0-dev -y
 
+
     git clone https://github.com/pyenv/pyenv.git ~/.pyenv
     
     # Install pyenv prerequisites
+    
     echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
     echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
     echo 'eval "$(pyenv init --path)"' >> ~/.profile
@@ -33,17 +35,35 @@ Vagrant.configure("2") do |config|
     # Now pyenv is set in profile rerun the profile itself
     source ~/.profile
 
-    # TODO: Install pyenv
-    
+    # Install Pyenv
     pyenv install 3.9.4 
     pyenv global 3.9.4
 
+    # Download and install poetry
     curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-
-    
-    
+  
   SHELL
 
+  config.trigger.after :up do |trigger|
+    trigger.name = "Launching App"
+    trigger.info = "Running the TODO app setup script"
+    trigger.run_remote = {privileged: false, inline: "
+      # Install dependencies and launch
+      cd /vagrant
+      poetry install
+      nohup poetry run flask run --host='0.0.0.0' > logs.txt 2>&1 &
+      "}
+    end
+ 
+    # Set Forwarded Port to direct from 500 on the host to 5000 on the VM (not working so do i need udp?)
+    # This needs to be out of the above shell, i.e. it needs to run in the host, not the guest part of this Vagrantfile
+    config.vm.network "forwarded_port", guest: 5000, host: 5000
+
+
+  # Final command above ^^^ - You should run as a background process so that it doesn't make vagrant up hang.
+  # Otherwise you have issues such as not being able to run vagrant halt to stop the VM.
+  # To do this, wrap your flask run command as above
+  
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
