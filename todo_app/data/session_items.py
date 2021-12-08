@@ -4,8 +4,16 @@
 # 
 # from flask import session
 #from .env import KEY, TOKEN, TODO, DOING, DONE
-from config import KEY, TOKEN, TODO, DOING, DONE
+
+#from config import KEY, TOKEN, TODO, DOING, DONE
 import requests
+
+import os
+KEY = os.getenv('KEY')
+TOKEN = os.getenv('TOKEN')
+TODO = os.getenv('TODO')
+DOING = os.getenv('DOING')
+DONE = os.getenv('DONE')
 
 class ViewModel:
     def __init__(self, items):

@@ -1,24 +1,24 @@
-FROM python:3.7.11-slim-buster
-#ENTRYPOINT ["echo", "Hello Fozz"]
-# docker build --tag todo-app .
-# docker build -f Dockerfile --tag todo-app .
+FROM python:3.7.11 as base 
+# Perform common operations, dependency installation etc... 
 
-# docker run -p 8080:80 --mount type=bind,src=$(pwd)/shared_space,dst=/opt/chimera/data todo-app
+# Download and install poetry
+RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+
+ENV PATH $PATH:/root/.poetry/bin
+
+# Copy current direcotry to docker container I think
+COPY . . 
+
+# Install dependencies
+RUN /root/.poetry/bin/poetry install
+
+# Run the flask web server (on docker run)
+ENTRYPOINT /root/.poetry/bin/poetry run flask run
 
 
-#(
-#    docker build -f Dockerfile.cliapp --tag cliapp-matt .
-#docker run --mount type=bind,src=$(pwd)/shared_space,dst=/opt/chimera/data cliapp-matt
-#)
 
-# docker run todo-app
 
- # Download and install poetry
- # need run in dockerfile
- RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 
-# Copy across your application code
-#?
-# Define an entrypoint, and default launch command
-#?
-
+# To run the above from command line port 5000 to 5000:
+# $ docker run --env-file .env -p 5000:5000 todo-app 
+# It doesn't work though

@@ -5,5 +5,103 @@
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 793-208-088
-10.0.2.2 - - [12/Oct/2021 12:28:34] "[37mGET / HTTP/1.1[0m" 200 -
-10.0.2.2 - - [12/Oct/2021 12:28:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088
+ * Detected change in '/vagrant/config.py', reloading
+ * Restarting with stat
+Python-dotenv could not parse statement starting at line 12
+ * Debugger is active!
+ * Debugger PIN: 793-208-088

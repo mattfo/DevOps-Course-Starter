@@ -1,13 +1,18 @@
-from config import TODO
 #from .env import TODO
 
 from flask import Flask, render_template, redirect, url_for, request
 
-from todo_app.flask_config import Config
+#from todo_app.flask_config import Config
+from todo_app.flask_config import os
+
 from todo_app.data import session_items as session
 
+#from config import TODO
+TODO = os.getenv('TODO')
+
 app = Flask(__name__)
-app.config.from_object(Config)
+#app.config.from_object(Config)
+app.config.from_object(os)
 
 @app.route('/')
 def index():

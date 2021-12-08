@@ -1,0 +1,57 @@
+FROM python:3.7.11-slim-buster
+
+
+
+# docker build --tag todo-app .
+docker build -f Dockerfile --tag todo-app .
+
+docker run todo-app
+# docker run -p 8080:80 --mount type=bind,src=$(pwd)/shared_space,dst=/opt/chimera/data todo-app
+
+
+# Download and install poetry
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+
+
+????
+docker run -e MYVAR1 --env MYVAR2=foo --env-file ./env.list ubuntu
+
+
+# Copy across your application code
+# What does this mean?
+
+# ?????
+
+#(
+#    docker build -f Dockerfile.cliapp --tag cliapp-matt .
+#docker run --mount type=bind,src=$(pwd)/shared_space,dst=/opt/chimera/data cliapp-matt
+#)
+
+
+# Define an entrypoint, and default launch command
+
+ENTRYPOINT ["echo", "Hello Fozz"]
+
+
+
+docker run todo-app
+
+
+# Add an EXPOSE instruction to document which port your application is listening on.
+
+# Make sure your app is running with gunicorn,
+
+
+  $ pip install gunicorn
+  $ cat myapp.py
+    def app(environ, start_response):
+        data = b"Hello, World!\n"
+        start_response("200 OK", [
+            ("Content-Type", "text/plain"),
+            ("Content-Length", str(len(data)))
+        ])
+        return iter([data])
+  $ gunicorn -w 4 myapp:app
+
+
+

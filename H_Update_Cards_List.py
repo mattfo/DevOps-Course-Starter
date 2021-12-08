@@ -1,9 +1,17 @@
 # This code sample uses the 'requests' library:
 # http://docs.python-requests.org
 
-from config import DOING, DONE, KEY, PYTHONWORK, TODO, TOKEN
+# from config import DOING, DONE, KEY, PYTHONWORK, TODO, TOKEN
 import requests
 import json
+
+import os
+DOING = os.getenv('DOING')
+DONE = os.getenv('DONE')
+KEY = os.getenv('KEY')
+PYTHONWORK = os.getenv('PYTHONWORK')
+TODO = os.getenv('TODO')
+TOKEN = os.getenv('TOKEN')
 
 #url = "https://api.trello.com/1/cards/07d1ead8f2f1211b027cf6bb676a9e28"
 url = "https://api.trello.com/1/cards/" + PYTHONWORK 

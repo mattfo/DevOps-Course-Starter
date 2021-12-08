@@ -1,4 +1,10 @@
-from config import DOING, DONE
+#from config import DOING, DONE
+
+import os
+DOING = os.getenv('DOING')
+DONE = os.getenv('DONE')
+
+
 from todo_app.data import session_items as session
 
 def test_complete_doing_list_simple():
